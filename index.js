@@ -48,3 +48,9 @@ async function createClient() {
 createClient().catch(err => {
     console.error("Erreur au démarrage :", err);
 });
+
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => res.send('Bot is running'));
+app.listen(process.env.PORT || 3000);
+
